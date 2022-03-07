@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout y Rutas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: rgb(238, 182, 230);
+            padding: 10px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: left;
+            width: 30%;
+            height: 500px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 500px;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: rgb(238, 182, 230);
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+      <img src="logo/pasteleria_luna.PNG" alt="Perritos lindos" width="150px" height="150px" > 
+        <h2>Pastelería Luna</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Fresa</a></li>
+                <li><a href="#">Café</a></li>
+                <li><a href="#">Mango</a></li>
+                <li><a href="#">Cajeta</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Fresa</h1>
+            <p>Delicioso pastel de tres leches cubierto de betún de vainilla y decorado con fresas</p>
+            <img src="logo/pastel_fresa.jpg" alt="Perritos lindos" width="350px" height="350px">
+        </article>
+    </section>
+
+    <footer>
+        <p>Teléfono de contacto: 5512337387
+            Dirección: Calle Esperanza #54, Roma, Ciudad de México, 03110
+            Horario de atención: Lunes a Sábado de 9 am a 8pm
+
+        </p>
+    </footer>
+
+</body>
+
+</html>
